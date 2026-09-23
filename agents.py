@@ -5,8 +5,8 @@ genai.configure(api_key=settings.GEMINI_API_KEY)
 
 class VincerAgents:
     def __init__(self):
-        # Using Google AI SDK model instance with stable flash model
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # Using current supported stable model instance
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
 
     async def coordinator_agent(self, query: str) -> dict:
         """Plans and breaks down the deep research query into tactical execution steps."""
